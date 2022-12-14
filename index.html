@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contentCalc" >
+        <h1 class="titleCalc">Calculadora</h1>
+        <div id="displayCalc">Display</div>
+        
+        <button class="teclaNumCalc" id="teclaclear" onclick="displayClear()">C</button>
+        <button class="teclaNumCalc" id="tecladiv" onclick="operation('div')">%</button>
+        <button class="teclaNumCalc" id="teclamult" onclick="operation('mult')">X</button><br>
+
+        <button class="teclaNumCalc" id="teclaNum7" onclick="breakApart('7')">7</button>
+        <button class="teclaNumCalc" id="teclaNum8" onclick="breakApart('8')">8</button>
+        <button class="teclaNumCalc" id="teclaNum9" onclick="breakApart('9')">9</button>        
+        <button class="teclaNumCalc" id="teclaNumsom" onclick="operation('sub')">-</button><br>
+
+        <button class="teclaNumCalc" id="teclaNum4" onclick="breakApart('4')">4</button>
+        <button class="teclaNumCalc" id="teclaNum5" onclick="breakApart('5')">5</button>
+        <button class="teclaNumCalc" id="teclaNum6" onclick="breakApart('6')">6</button>
+        <button class="teclaNumCalc" id="teclasub" onclick="operation('som')">+</button><br>
+        <button class="teclaNumCalc" id="teclaNum1" onclick="breakApart('1')">1</button>
+        <button class="teclaNumCalc" id="teclaNum2" onclick="breakApart('2')">2</button>
+        <button class="teclaNumCalc" id="teclaNum3" onclick="breakApart('3')">3</button>
+        <button class="teclaNumCalc" id="teclaigual" onclick="calculate()">=</button><br>
+        <button class="teclaNumCalc" id="teclaNum0" onclick="breakApart('0')">0</button>
+        <button class="teclaNumCalc" id="tecla," onclick="breakApart('.')">,</button>
+        <button class="teclaNumCalc" id="tecladel" onclick="del()">del</button>
+
+
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
