@@ -1,12 +1,11 @@
 var firstNum =null;
 var secondNum =null;
-var operation
-var number
+var operation;
+var number;
 var fullNumber = '';
-const display = document.getElementById('displayCalc')
+const display = document.getElementById('displayCalc');
 var answer='';
 var signal;
-var sizeString = fullNumber.length;
 
 /*
 variável operador aritmético, para exibir no display - talvez a propria variavel
@@ -64,8 +63,7 @@ function saveFirstNumber(){
 // math functions
 function breakApart(number) {
     fullNumber = fullNumber + number;
-    displayWrite(fullNumber);
-    
+    displayWrite(fullNumber);    
 }
 
 function result() {
@@ -76,9 +74,9 @@ function result() {
         answer == '';
     }else{
         displayWrite(firstNum+operador+secondNum+' = '+answer);
-    }
-    
+    }    
 }
+
 
 // Calculate
 function calculate() {
@@ -103,17 +101,23 @@ function calculate() {
             default:
                 answer = '';
         }
-        /*
-        if(signal == 'som'){answer = firstNum + secondNum;;}
-        else if(signal == 'sub'){answer = firstNum - secondNum;}
-        else if(signal == 'mult'){answer = firstNum * secondNum;}
-        else if(signal == 'div'){answer = firstNum / secondNum;}
-        */
         result();
-        fullNumber = '';    
+        fullNumber = '';
 }
 
+
 function del() {
-    alert('this cant use now, wait for new program version');
-    reset(1);
+    let numero_tela = display.innerHTML;
+    if(numero_tela>10){
+        numero_tela = numero_tela/10;
+        numero_tela = parseInt(numero_tela);
+    }else{
+        numero_tela = numero_tela-numero_tela;
+    }
+    if(numero_tela==0){
+        display.innerHTML = '';
+    }else{
+        display.innerHTML = numero_tela;
+    }    
+    fullNumber = numero_tela;
 }
