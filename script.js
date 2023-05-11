@@ -115,7 +115,7 @@ function del() {
         numero_tela = numero_tela-numero_tela;
     }
     if(numero_tela==0){
-        display.innerHTML = '';
+        display.innerHTML = null;
     }else{
         display.innerHTML = numero_tela;
     }    
